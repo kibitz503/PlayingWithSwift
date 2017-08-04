@@ -14,28 +14,14 @@ public protocol PartialSuccessModel: ErrorModel, SuccessModel {
     
 }
 
-//contrived model and extensions
-public class APIModel {
-    public init() {
-        
-    }
+//contrived model
+public class APIModel: PartialSuccessModel{
+    public init() {}
     
     public let cellTitle = "cellTitle"
     public let cellSubtitle = "cellSubtitle"
     public let errorMessage = "error message"
     public let errorSeverity = "error severity"
-}
-
-extension APIModel: ErrorModel {
-   
-}
-
-extension APIModel: SuccessModel {
-    
-}
-
-extension APIModel: PartialSuccessModel {
-    
 }
 
 //convenience

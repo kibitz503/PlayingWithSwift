@@ -5,6 +5,7 @@ public enum Result {
     case success(successModel: SuccessModel)
     case partialSucess(partialSuccessModel: PartialSuccessModel)
     
+    //if you use adhoc poly it makes this less useful
     public func doWork(value: Result) {
         switch value {
         case .error(let associatedValue):
